@@ -1,4 +1,26 @@
+<h1>{{title }}</h1>
+<p>Welcome to {{title }}</p>
 
+<form action="/get-tickers">
+  <input type="submit" value="Get Tickers">
+</form>
 
-  <h1>{{title }}</h1>
-  <p>Welcome to {{title }}</p>
+{{!-- <ul>
+  {{#each tickers}}
+   <li>{{this.name}}</li>
+  {{/each}}
+</ul> --}}
+
+<table id="crypto-currency-table">
+  <tr>
+    {{#each tableHeaders}}
+      <th>{{this}}</th>
+    {{/each}}
+  </tr>
+  {{#each tickers}}
+    <tr>
+      <td>{{this.id}}</td>
+      <td>{{this.name}}</td>
+    </tr>
+  {{/each}}
+</table>

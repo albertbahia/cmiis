@@ -29,6 +29,12 @@ router.get('/get-tickers', function(req, res, next) {
       return res.json()
     }).then(function(json) {
       console.log(json);
+
+      res.render('index', {
+        tableHeaders: Object.keys(json[0]),
+        tickers: json
+      });
+
     });
 });
 // ---------------------------------------------------------------
