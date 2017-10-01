@@ -42,6 +42,9 @@ router.get('/get-tickers', function(req, res, next) {
         headers.push(el);
       });
 
+      // ---------------------------------------------------------------
+      // Calculation Millionth of Supply from CoinMarketCap API Response
+      // ---------------------------------------------------------------
       json.forEach(function(el) {
         
         el.millionthMktCapUSD = "$" + String(numberWithCommas((el.market_cap_usd * Math.pow(10, -6)).toFixed(2)));
@@ -50,11 +53,16 @@ router.get('/get-tickers', function(req, res, next) {
 
         tickers.push(el);
       });
-      
+      // ---------------------------------------------------------------
+
+      // ------------------------
+      // Render in index template
+      // ------------------------
       res.render('index', {
         tableHeaders: headers,
         tickers: tickers
       });
+      // ------------------------
 
     });
 });
