@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each tickers}}
+    {{#each tickers }}
       <tr>
         <td>{{this.id}}</td>
         <td>{{this.name}}</td>
@@ -29,6 +29,8 @@
         <td>{{this.percent_change_24h}}</td>
         <td>{{this.percent_change_7d}}</td>
         <td>{{this.last_updated}}</td>
+        <td>{{this.millionthMktCapUSD}}</td>
+        <td>{{this.millionthCoins}}</td>
       </tr>
     {{/each}}
   </tbody>

@@ -28,11 +28,32 @@ router.get('/get-tickers', function(req, res, next) {
     .then(function(res) {
       return res.json()
     }).then(function(json) {
-      console.log(json);
 
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+    
+      var millionthMktCaps = [],
+        tickers = [],
+        headers = Object.keys(json[0]),
+        additionalHeaders = ['Millionth USD', 'Millionth of Coins'];
+
+      additionalHeaders.forEach(function(el) {
+        headers.push(el);
+      });
+
+      json.forEach(function(el) {
+        
+        el.millionthMktCapUSD = "$" + String(numberWithCommas((el.market_cap_usd * Math.pow(10, -6)).toFixed(2)));
+
+        el.millionthCoins = (el.available_supply * Math.pow(10, -6)).toFixed(1);
+
+        tickers.push(el);
+      });
+      
       res.render('index', {
-        tableHeaders: Object.keys(json[0]),
-        tickers: json
+        tableHeaders: headers,
+        tickers: tickers
       });
 
     });
