@@ -1,0 +1,20 @@
+2017-10-01T01:17:34.439184000 0.441042s notice: Recursively removing directory /Users/niko/web-app-development/cmiis_crypto_app/rethinkdb_data/tmp
+2017-10-01T01:17:34.441112000 0.442974s notice: Initializing directory /Users/niko/web-app-development/cmiis_crypto_app/rethinkdb_data
+2017-10-01T01:17:34.441205000 0.443062s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/niko/web-app-development/cmiis_crypto_app/rethinkdb_data' did not already exist or is empty.)
+2017-10-01T01:17:34.441236000 0.443094s notice: Running rethinkdb 2.3.6 (CLANG 8.0.0 (clang-800.0.42.1))...
+2017-10-01T01:17:34.448457000 0.450316s notice: Running on Darwin 15.6.0 x86_64
+2017-10-01T01:17:34.448507000 0.450365s notice: Loading data from directory /Users/niko/web-app-development/cmiis_crypto_app/rethinkdb_data
+2017-10-01T01:17:34.609610000 0.611429s info: Automatically using cache size of 100 MB
+2017-10-01T01:17:34.609619000 0.611438s warn: Cache size does not leave much memory for server and query overhead (available memory: 940 MB).
+2017-10-01T01:17:34.609624000 0.611443s warn: Cache size is very low and may impact performance.
+2017-10-01T01:17:34.610637000 0.612456s notice: Listening for intracluster connections on port 29015
+2017-10-01T01:17:34.612551000 0.614370s notice: Listening for client driver connections on port 28015
+2017-10-01T01:17:34.612750000 0.614569s notice: Listening for administrative HTTP connections on port 8080
+2017-10-01T01:17:34.612754000 0.614573s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-10-01T01:17:34.612759000 0.614578s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-10-01T01:17:34.612762000 0.614580s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-10-01T01:17:34.612766000 0.614585s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-10-01T01:17:34.612771000 0.614590s notice: Server ready, "Alberts_MBP_2_fios_router_home_ycf" 64637392-aa53-4da6-b667-6efe9f6ec3f6
+2017-10-01T01:22:44.644289000 310.634512s info: Table b5d08587-2a77-4c24-9c85-47f61dc76ef9: Starting a new Raft election for term 1.
+2017-10-01T01:22:44.645131000 310.635354s info: Table b5d08587-2a77-4c24-9c85-47f61dc76ef9: Added replica on this server.
+2017-10-01T01:22:44.673902000 310.664125s info: Table b5d08587-2a77-4c24-9c85-47f61dc76ef9: This server is Raft leader for term 1. Latest log index is 0.

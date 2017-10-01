@@ -9,7 +9,7 @@ var config = {
       name: 'cmiis-crypto-app'
     },
     port: process.env.PORT || 3000,
-    db: {db: 'cmiis-crypto-app_development'}
+    db: {db: 'cmiis_app_development'}
   },
 
   test: {
@@ -18,7 +18,7 @@ var config = {
       name: 'cmiis-crypto-app'
     },
     port: process.env.PORT || 3000,
-    db: {db: 'cmiis-crypto-app_test'}
+    db: {db: 'cmiis_app_test'}
   },
 
   production: {
@@ -27,7 +27,7 @@ var config = {
       name: 'cmiis-crypto-app'
     },
     port: process.env.PORT || 3000,
-    db: {db: 'cmiis-crypto-app_production'}
+    db: {db: 'cmiis_app_production'}
   }
 };
 
