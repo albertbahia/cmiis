@@ -36,7 +36,12 @@ router.get('/get-tickers', function(req, res, next) {
       var millionthMktCaps = [],
         tickers = [],
         headers = Object.keys(json[0]),
-        additionalHeaders = ['Millionth USD', 'Millionth of Coins'];
+        additionalHeaders = ['Millionth USD', 'Millionth of Coins','% To Buy (Top 10)'];
+		  var totalTopTenUSD = 0,
+					totalTopTwentyUSD = 0;
+			
+			var currency,
+					number;
 
       additionalHeaders.forEach(function(el) {
         headers.push(el);
@@ -55,7 +60,24 @@ router.get('/get-tickers', function(req, res, next) {
       });
       // ---------------------------------------------------------------
 
-      // ------------------------
+			// ---------------------------------------------------------------
+			// Calculate Percentage to Buy of the Top 10 Coins
+ 			// ---------------------------------------------------------------
+			for (let i = 0; i < 10; i++) {
+				currency = tickers[i].millionthMktCapUSD;
+				number = Number(currency.replace(/[^0-9\.-]+/g,""));
+								
+				tickers[i].topTenBuyUSD = number; // Set up the numerator for division
+				totalTopTenUSD += tickers[i].topTenBuyUSD; // Add the top 10 coins millionth market cap in USD
+
+			}
+
+			for (let j = 0; j < 10; j++ ) {
+				tickers[j].topTenBuyPerc = ((tickers[j].topTenBuyUSD / totalTopTenUSD) * 100).toFixed(2) + "%";
+			}
+
+			console.log(tickers[2]);
+			// ------------------------
       // Render in index template
       // ------------------------
       res.render('index', {
