@@ -61,7 +61,7 @@ router.get('/get-tickers', function(req, res, next) {
       // ---------------------------------------------------------------
 
 			// ---------------------------------------------------------------
-			// Calculate Percentage to Buy of the Top 10 Coins
+			// Calculate Percentage (of your available disposable income) to Buy of the Top 10 Coins
  			// ---------------------------------------------------------------
 			for (let i = 0; i < 10; i++) {
 				currency = tickers[i].millionthMktCapUSD;
@@ -75,8 +75,8 @@ router.get('/get-tickers', function(req, res, next) {
 			for (let j = 0; j < 10; j++ ) {
 				tickers[j].topTenBuyPerc = ((tickers[j].topTenBuyUSD / totalTopTenUSD) * 100).toFixed(2) + "%";
 			}
+			// ---------------------------------------------------------------
 
-			console.log(tickers[2]);
 			// ------------------------
       // Render in index template
       // ------------------------
