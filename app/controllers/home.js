@@ -24,18 +24,25 @@ router.get('/', function (req, res, next) {
 // Phase 2: Modify this route so that it automatically makes the request on intervals 
 // ---------------------------------------------------------------
 router.get('/get-tickers', function(req, res, next) {
-      
-
-			// ------------------------
-      // Render in index template
-      // ------------------------
-      res.render('index', {
-        tableHeaders: headers,
-        tickers: tickers
-      });
-      // ------------------------
-
+  var coin = new Ticker({});
+  
+  coin.getTickers().then(function(result) {
+    return result;
+  })
+  .then(function(result) {
+    var headers = result['headers'],
+        tickers = result['tickers'];
+    
+    // console.log(result['headers']);
+    // ------------------------
+    // Render in index template
+    // ------------------------
+    res.render('index', {
+      tableHeaders: headers,
+      tickers: tickers
     });
+    // ------------------------
+  });
 });
 // ---------------------------------------------------------------
 
