@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
 // Phase 2: Modify this route so that it automatically makes the request on intervals 
 // ---------------------------------------------------------------
 router.get('/get-tickers', function(req, res, next) {
-  
+      
 
 			// ------------------------
       // Render in index template
