@@ -1,50 +1,54 @@
-<h1>Welcome to CMIIS</h1>
+<div class="container-fluid">
+  <h1>Welcome to CMIIS</h1>
 
-<form action="/get-tickers">
-  <input type="submit" value="Get Tickers">
-</form>
+  <form action="/get-tickers">
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Get Tickers</button>
+    </div>
+  </form>
 
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
-      <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Input disposable income..." id="disposable-income-input" >
-      <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button" id="disposable-income-button">Go!</button>
-        </span>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Input disposable income..." id="disposable-income-input" >
+        <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button" id="disposable-income-button">Go!</button>
+          </span>
+      </div>
     </div>
   </div>
-</div>
 
-<table id="crypto-currency-table" class="table table-inverse table-striped table-bordered">
-  <thead>
-    <tr>
-      {{#each tableHeaders}}
-        <th>{{this}}</th>
-      {{/each}}
-    </tr>
-  </thead>
-  <tbody>
-    {{#each tickers }}
+  <table id="crypto-currency-table" class="table table-inverse table-striped table-bordered">
+    <thead>
       <tr>
-        <td>{{this.id}}</td>
-        <td>{{this.name}}</td>
-        <td>{{this.symbol}}</td>
-        <td>{{this.rank}}</td>
-        <td>{{this.price_usd}}</td>
-        <td>{{this.price_btc}}</td>
-        <td>{{this.24h_volume_usd}}</td>
-        <td>{{this.market_cap_usd}}</td>
-        <td>{{this.available_supply}}</td>
-        <td>{{this.total_supply}}</td>
-        <td>{{this.percent_change_1h}}</td>
-        <td>{{this.percent_change_24h}}</td>
-        <td>{{this.percent_change_7d}}</td>
-        <td>{{this.last_updated}}</td>
-        <td>{{this.millionthMktCapUSD}}</td>
-        <td>{{this.millionthCoins}}</td>
-				<td>{{this.topTenBuyPerc}}</td>
+        {{#each tableHeaders}}
+          <th>{{this}}</th>
+        {{/each}}
       </tr>
-    {{/each}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {{#each tickers }}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.symbol}}</td>
+          <td>{{this.rank}}</td>
+          <td>{{this.price_usd}}</td>
+          <td>{{this.price_btc}}</td>
+          <td>{{this.24h_volume_usd}}</td>
+          <td>{{this.market_cap_usd}}</td>
+          <td>{{this.available_supply}}</td>
+          <td>{{this.total_supply}}</td>
+          <td>{{this.percent_change_1h}}</td>
+          <td>{{this.percent_change_24h}}</td>
+          <td>{{this.percent_change_7d}}</td>
+          <td>{{this.last_updated}}</td>
+          <td>{{this.millionthMktCapUSD}}</td>
+          <td>{{this.millionthCoins}}</td>
+          <td>{{this.topTenBuyPerc}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
