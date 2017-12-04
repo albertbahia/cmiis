@@ -48,3 +48,21 @@
 2017-11-20T17:10:02.150106000 818.185494s notice: All client connections closed.
 2017-11-20T17:10:02.150111000 818.185499s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2017-11-20T17:10:02.161261000 818.196650s notice: Storage engine shut down.
+2017-12-03T19:27:29.012589000 0.454186s notice: Running rethinkdb 2.3.6 (CLANG 8.0.0 (clang-800.0.42.1))...
+2017-12-03T19:27:29.021195000 0.462786s notice: Running on Darwin 15.6.0 x86_64
+2017-12-03T19:27:29.021237000 0.462827s notice: Loading data from directory /Users/Albert/web_app_development/cmiis/rethinkdb_data
+2017-12-03T19:27:29.057287000 0.498878s info: Automatically using cache size of 100 MB
+2017-12-03T19:27:29.057301000 0.498892s warn: Cache size does not leave much memory for server and query overhead (available memory: 737 MB).
+2017-12-03T19:27:29.057308000 0.498898s warn: Cache size is very low and may impact performance.
+2017-12-03T19:27:29.058279000 0.499869s notice: Listening for intracluster connections on port 29015
+2017-12-03T19:27:29.093663000 0.535254s notice: Listening for client driver connections on port 28015
+2017-12-03T19:27:29.093894000 0.535484s notice: Listening for administrative HTTP connections on port 8080
+2017-12-03T19:27:29.093897000 0.535487s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-12-03T19:27:29.093899000 0.535489s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-12-03T19:27:29.093901000 0.535491s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-12-03T19:27:29.093903000 0.535493s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-12-03T19:27:29.093915000 0.535506s notice: Server ready, "Alberts_MBP_2_fios_router_home_ycf" 64637392-aa53-4da6-b667-6efe9f6ec3f6
+2017-12-03T19:27:30.880364000 2.321900s info: Table 735d4b86-5de3-4ea4-91d8-fde2b019b362: Starting a new Raft election for term 2.
+2017-12-03T19:27:30.906131000 2.347667s info: Table 735d4b86-5de3-4ea4-91d8-fde2b019b362: This server is Raft leader for term 2. Latest log index is 3.
+2017-12-03T19:27:30.940107000 2.381643s info: Table b5d08587-2a77-4c24-9c85-47f61dc76ef9: Starting a new Raft election for term 3.
+2017-12-03T19:27:30.990892000 2.432428s info: Table b5d08587-2a77-4c24-9c85-47f61dc76ef9: This server is Raft leader for term 3. Latest log index is 6.

@@ -12,6 +12,7 @@ var Ticker = thinky.createModel('Ticker', {
    market_cap_usd: String,
    available_supply: String,
    total_supply: String,
+   max_supply: String,
    percent_chang_1h: String,
    percent_change_24h: String,
    percent_change_7d: String
